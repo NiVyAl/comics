@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Comics-font";
+  src: url("fonts/comic.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Arial";
+}
+
+.comics {
+  --dark-blue: #150944;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 10px 40px; 
+}
+
+.comics__text {
+  margin-top: 80px;
+  font-size: 20px;
+}
+
+.comics__image {
+  position: relative;
+  display: block;
+  margin-top: 120px;
+}
+
+.comics__bubble {
+  display: block;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  color: black;
+  font-family: "Comics-font";
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid var(--dark-blue);
+  //top: -90px;
+  bottom: 95%;
+  left: 10px;
+  text-transform: uppercase;
+}
+
+.comics__bubble::before, .comics__bubble::after {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  border: 2px solid var(--dark-blue);
+  position: absolute;
+}
+
+.comics__bubble::before {
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  bottom: -25px;
+}
+
+.comics__bubble::after {
+  width: 20px;
+  height: 20px;
+  right: -5px;
+  bottom: -40px;
+}
+
+@media (min-width: 768px) {
+  .comics__image {
+    width: 50%;
+  }
+}
